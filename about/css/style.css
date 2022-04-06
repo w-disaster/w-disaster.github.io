@@ -1,0 +1,9 @@
+img[src*="#me"] {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
