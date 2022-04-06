@@ -1,1 +1,7 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Crypto - Category - My blog</title><link>https://w-disaster.github.io/categories/crypto/</link><description>Crypto - Category - My blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="https://w-disaster.github.io/categories/crypto/" rel="self" type="application/rss+xml"/></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Crypto - Category - My blog</title>
+        <link>https://w-disaster.github.io/categories/crypto/</link>
+        <description>Crypto - Category - My blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="https://w-disaster.github.io/categories/crypto/" rel="self" type="application/rss+xml" /></channel>
+</rss>
