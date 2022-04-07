@@ -2,11 +2,11 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://w-disaster.github.io/about/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/tags/content/_index.fr/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/categories/crypto/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/tags/installation/_index.zh-cn/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/tags/configuration/_index.zh-cn/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+            <loc>https://w-disaster.github.io/about/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://w-disaster.github.io/categories/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://w-disaster.github.io/tags/content/_index.fr/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://w-disaster.github.io/categories/crypto/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://w-disaster.github.io/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://w-disaster.github.io/tags/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://w-disaster.github.io/tags/installation/_index.zh-cn/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://w-disaster.github.io/tags/configuration/_index.zh-cn/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url></urlset>
