@@ -3,7 +3,16 @@
         <title>All Posts - w-disaster blog</title>
         <link>https://w-disaster.github.io/posts/</link>
         <description>All Posts | w-disaster blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 07 Apr 2022 22:00:00 &#43;0200</lastBuildDate><atom:link href="https://w-disaster.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 12 May 2022 17:02:00 &#43;0200</lastBuildDate><atom:link href="https://w-disaster.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>ROP - Callme</title>
+    <link>https://w-disaster.github.io/callme/</link>
+    <pubDate>Thu, 12 May 2022 17:02:00 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://w-disaster.github.io/callme/</guid>
+    <description><![CDATA[Description This challenge has been taken from https://ropemporium.com/challenge/callme.html. The purpose is to change the flow of execution such that the functions callme_one, callme_two, and callme_three are called in sequence with 0xdeadbeefdeadbeef, 0xcafebabecafebabe, and 0xd00df00dd00df00d as parameters for each of them. More information in the linked website.
+How to build the ROP chain Download the challenge:
+1 2  curl --output callme.zip https://ropemporium.com/binary/callme.zip unzip callme.zip &amp;&amp; rm callme.zip   First, let&rsquo;s see the function written by the programmer:]]></description>
+</item><item>
     <title>Crypto - ECB oracle</title>
     <link>https://w-disaster.github.io/ecb-oracle/</link>
     <pubDate>Thu, 07 Apr 2022 22:00:00 &#43;0200</pubDate>

