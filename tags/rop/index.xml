@@ -3,7 +3,16 @@
         <title>rop - Tag - w-disaster blog</title>
         <link>https://w-disaster.github.io/tags/rop/</link>
         <description>rop - Tag - w-disaster blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 12 May 2022 17:02:00 &#43;0200</lastBuildDate><atom:link href="https://w-disaster.github.io/tags/rop/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 13 May 2022 21:13:00 &#43;0200</lastBuildDate><atom:link href="https://w-disaster.github.io/tags/rop/" rel="self" type="application/rss+xml" /><item>
+    <title>ROP - Split</title>
+    <link>https://w-disaster.github.io/split/</link>
+    <pubDate>Fri, 13 May 2022 21:13:00 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://w-disaster.github.io/split/</guid>
+    <description><![CDATA[Description This challenge has been taken from https://ropemporium.com/challenge/split.html. The purpose is to call the system() function with /bin/cat flag.txt as parameter. We also know that this string is contained in a section inside our binary. More information in the linked website.
+How to build the ROP chain Download the challenge:
+1 2  curl --output split.zip https://ropemporium.com/binary/split.zip unzip split.zip &amp;&amp; rm split.zip   Since the string is contained in the executable, let&rsquo;s start using rabin2 to locate it:]]></description>
+</item><item>
     <title>ROP - Callme</title>
     <link>https://w-disaster.github.io/callme/</link>
     <pubDate>Thu, 12 May 2022 17:02:00 &#43;0200</pubDate>
