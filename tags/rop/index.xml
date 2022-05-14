@@ -3,7 +3,20 @@
         <title>rop - Tag - w-disaster blog</title>
         <link>https://w-disaster.github.io/tags/rop/</link>
         <description>rop - Tag - w-disaster blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 13 May 2022 21:13:00 &#43;0200</lastBuildDate><atom:link href="https://w-disaster.github.io/tags/rop/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 14 May 2022 11:00:00 &#43;0200</lastBuildDate><atom:link href="https://w-disaster.github.io/tags/rop/" rel="self" type="application/rss+xml" /><item>
+    <title>ROP - Write4</title>
+    <link>https://w-disaster.github.io/write4/</link>
+    <pubDate>Sat, 14 May 2022 11:00:00 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://w-disaster.github.io/write4/</guid>
+    <description><![CDATA[Description This challenge has been taken from https://ropemporium.com/challenge/write4.html.
+How to build the ROP chain Download the challenge:
+1 2  curl --output split.zip https://ropemporium.com/binary/split.zip unzip split.zip &amp;&amp; rm split.zip   Since the string is contained in the executable, let&rsquo;s start using rabin2 to locate it:
+1  rabin2 -z split    [Strings]
+nth paddr vaddr len size section type string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0 0x000007e8 0x004007e8 21 22 .rodata ascii split by ROP Emporium]]></description>
+</item><item>
     <title>ROP - Split</title>
     <link>https://w-disaster.github.io/split/</link>
     <pubDate>Fri, 13 May 2022 21:13:00 &#43;0200</pubDate>
@@ -11,7 +24,7 @@
     <guid>https://w-disaster.github.io/split/</guid>
     <description><![CDATA[Description This challenge has been taken from https://ropemporium.com/challenge/split.html. The purpose is to call the system() function with /bin/cat flag.txt as parameter. We also know that this string is contained in a section inside our binary. More information in the linked website.
 How to build the ROP chain Download the challenge:
-1 2  curl --output split.zip https://ropemporium.com/binary/split.zip unzip split.zip &amp;&amp; rm split.zip   Since the string is contained in the executable, let&rsquo;s start using rabin2 to locate it:]]></description>
+1 2  $ curl --output split.zip https://ropemporium.com/binary/split.zip $ unzip split.zip &amp;&amp; rm split.zip   Since the string is contained in the executable, let&rsquo;s start using rabin2 to locate it:]]></description>
 </item><item>
     <title>ROP - Callme</title>
     <link>https://w-disaster.github.io/callme/</link>
@@ -20,6 +33,6 @@ How to build the ROP chain Download the challenge:
     <guid>https://w-disaster.github.io/callme/</guid>
     <description><![CDATA[Description This challenge has been taken from https://ropemporium.com/challenge/callme.html. The purpose is to change the flow of execution such that the functions callme_one, callme_two, and callme_three are called in sequence with 0xdeadbeefdeadbeef, 0xcafebabecafebabe, and 0xd00df00dd00df00d as parameters for each of them. More information in the linked website.
 How to build the ROP chain Download the challenge:
-1 2  curl --output callme.zip https://ropemporium.com/binary/callme.zip unzip callme.zip &amp;&amp; rm callme.zip   First, let&rsquo;s see the function written by the programmer:]]></description>
+1 2  $ curl --output callme.zip https://ropemporium.com/binary/callme.zip $ unzip callme.zip &amp;&amp; rm callme.zip   First, let&rsquo;s see the function written by the programmer:]]></description>
 </item></channel>
 </rss>

