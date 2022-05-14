@@ -104,13 +104,9 @@
         title="/about/img/w-disaster.jpg" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/https://github.com/w-disaster" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/https://www.linkedin.com/in/luca-fabri-291a781aa/" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/https://twitter.com/Luca36436557" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/write4/">ROP - Write4</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>w-disaster</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-05-14">2022-05-14</time></span>&nbsp;<span class="post-category">included in <a href="/categories/rop/"><i class="far fa-folder fa-fw"></i>ROP</a></span></div><div class="content">Description This challenge has been taken from https://ropemporium.com/challenge/write4.html.
-How to build the ROP chain Download the challenge:
-1 2  curl --output split.zip https://ropemporium.com/binary/split.zip unzip split.zip &amp;&amp; rm split.zip   Since the string is contained in the executable, let&rsquo;s start using rabin2 to locate it:
-1  rabin2 -z split    [Strings]
-nth paddr vaddr len size section type string
-―――――――――――――――――――――――――――――――――――――――――――――――――――――――
-0 0x000007e8 0x004007e8 21 22 .rodata ascii split by ROP Emporium</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>w-disaster</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-05-14">2022-05-14</time></span>&nbsp;<span class="post-category">included in <a href="/categories/rop/"><i class="far fa-folder fa-fw"></i>ROP</a></span></div><div class="content">Description This challenge has been taken from https://ropemporium.com/challenge/write4.html. This time the string cat flag.txt is not contained in the binary. We&rsquo;re given a couple of hints:
+ there&rsquo;s a function print_file() which takes the filename string as the first argument; we need to search for a gadget which stores a value into the memory such as mov [reg], reg.  Explore the binary Download the challenge:
+1 2  curl --output split.</div><div class="post-footer">
         <a href="/write4/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/returned-oriented-programming/">returned-oriented programming</a>,&nbsp;<a href="/tags/rop/">rop</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">

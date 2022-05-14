@@ -9,13 +9,9 @@
     <pubDate>Sat, 14 May 2022 11:00:00 &#43;0200</pubDate>
     <author>Author</author>
     <guid>https://w-disaster.github.io/write4/</guid>
-    <description><![CDATA[Description This challenge has been taken from https://ropemporium.com/challenge/write4.html.
-How to build the ROP chain Download the challenge:
-1 2  curl --output split.zip https://ropemporium.com/binary/split.zip unzip split.zip &amp;&amp; rm split.zip   Since the string is contained in the executable, let&rsquo;s start using rabin2 to locate it:
-1  rabin2 -z split    [Strings]
-nth paddr vaddr len size section type string
-―――――――――――――――――――――――――――――――――――――――――――――――――――――――
-0 0x000007e8 0x004007e8 21 22 .rodata ascii split by ROP Emporium]]></description>
+    <description><![CDATA[Description This challenge has been taken from https://ropemporium.com/challenge/write4.html. This time the string cat flag.txt is not contained in the binary. We&rsquo;re given a couple of hints:
+ there&rsquo;s a function print_file() which takes the filename string as the first argument; we need to search for a gadget which stores a value into the memory such as mov [reg], reg.  Explore the binary Download the challenge:
+1 2  curl --output split.]]></description>
 </item><item>
     <title>ROP - Split</title>
     <link>https://w-disaster.github.io/split/</link>
