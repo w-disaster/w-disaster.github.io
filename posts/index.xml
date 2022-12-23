@@ -10,7 +10,7 @@
     <author>Author</author>
     <guid>https://w-disaster.github.io/badchars/</guid>
     <description><![CDATA[Description CTF took from https://ropemporium.com/challenge/badchars.html.
-The aim of this challenge is similar to the previous one (write4): store a string into memory and call print_file to show then content of flag.txt. The difference is that badchars are applied to every character passed as input, so the string might be handled in some way to change its content after storing it in memory.
+The aim of this challenge is similar to the previous one (write4): store a string into memory and call print_file to show the content of flag.txt. The difference is that badchars are applied to every character passed as input, so the string might be handled in some way to change its content after storing it in memory.
 More information are shown in the linked website.]]></description>
 </item><item>
     <title>ROP - Write4</title>

@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/w-disaster.github.io\/badchars\/"
-        },"image": ["https:\/\/w-disaster.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "returned-oriented programming, rop","wordcount":  1609 ,
+        },"image": ["https:\/\/w-disaster.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "returned-oriented programming, rop","wordcount":  1612 ,
         "url": "https:\/\/w-disaster.github.io\/badchars\/","datePublished": "2022-12-23T12:17:00+02:00","dateModified": "2022-12-23T12:17:00+02:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/w-disaster.github.io\/images\/avatar.png"},"author": {
@@ -106,7 +106,7 @@
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">ROP - Badchars</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>w-disaster</a></span>&nbsp;<span class="post-category">included in <a href="/categories/rop/"><i class="far fa-folder fa-fw"></i>ROP</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-12-23">2022-12-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1609 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-12-23">2022-12-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1612 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;8 minutes&nbsp;<span id="/badchars/" class="leancloud_visitors" data-flag-title="ROP - Badchars">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -125,7 +125,7 @@
 </nav></div>
             </div><div class="content" id="content"><h2 id="description">Description</h2>
 <p>CTF took from <a href="https://ropemporium.com/challenge/badchars.html">https://ropemporium.com/challenge/badchars.html</a>.</p>
-<p>The aim of this challenge is similar to the previous one (<a href="https://w-disaster.github.io/write4/" target="_blank" rel="noopener noreffer">write4</a>): store a string into memory and call <code>print_file</code> to show then content of <code>flag.txt</code>. The difference is that <em>badchars</em> are applied to every character passed as input, so the string might be handled in some way to change its content after storing it in memory.</p>
+<p>The aim of this challenge is similar to the previous one (<a href="https://w-disaster.github.io/write4/" target="_blank" rel="noopener noreffer">write4</a>): store a string into memory and call <code>print_file</code> to show the content of <code>flag.txt</code>. The difference is that <em>badchars</em> are applied to every character passed as input, so the string might be handled in some way to change its content after storing it in memory.</p>
 <p>More information are shown in the linked website.</p>
 <h2 id="analyze-the-binary">Analyze the binary</h2>
 <p>Download the challenge:</p>
@@ -162,7 +162,7 @@ nth vaddr      <span class="nb">bind</span>   <span class="nb">type</span>   lib
 <span class="m">4</span>   0x00400510 GLOBAL FUNC       print_file
 </code></pre></td></tr></table>
 </div>
-</div><p>First, let&rsquo;s see the function written by the programmer:</p>
+</div><p>First, let&rsquo;s see the functions written by the programmer:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -176,7 +176,7 @@ nth vaddr      <span class="nb">bind</span>   <span class="nb">type</span>   lib
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">$ rabin2 -qs badchars<span class="p">|</span> grep -ve imp -e <span class="s1">&#39; 0 &#39;</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ rabin2 -qs badchars<span class="p">|</span> grep -ve imp -e <span class="s1">&#39; 0 &#39;</span>
 0x00601038 <span class="m">1</span> completed.7698
 0x00400617 <span class="m">17</span> usefulFunction
 0x004006b0 <span class="m">2</span> __libc_csu_fini
@@ -260,7 +260,7 @@ nth vaddr      <span class="nb">bind</span>   <span class="nb">type</span>   lib
 </div>
 </div><p>Note that:</p>
 <ul>
-<li>There&rsquo;s a <code>rax,[rbp-0x40]; add rax,0x20</code> instruction before the memset and read operation, so the address where the input string will be placed is <code>[rbp-0x20]</code>.</li>
+<li>There&rsquo;s a <code>lea rax,[rbp-0x40]; add rax,0x20</code> instruction before the memset and read operation, so the address where the input string will be placed is from <code>[rbp-0x20]</code>.</li>
 <li>No bound checking is done for the input string, so we can override the <code>rsp</code> register to modify as we want the flow of execution of this program.</li>
 <li>The <code>leave</code> instruction does <code>mov rsp, rbp; pop rbp</code> and the <code>ret</code> a <code>add rsp, 0x8</code>.</li>
 </ul>
@@ -331,7 +331,7 @@ Key to Flags:
   l <span class="o">(</span>large<span class="o">)</span>, p <span class="o">(</span>processor specific<span class="o">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>.data</code> is writable so let&rsquo;s take its address (<code>0000000000601028</code>).</p>
+</div><p><code>.data</code> section is writable so let&rsquo;s take its address (<code>0x0000000000601028</code>).</p>
 <h2 id="deal-with-badchars">Deal with badchars</h2>
 <p>Run the executable to inspect the badchars:</p>
 <div class="highlight"><div class="chroma">
@@ -352,7 +352,7 @@ badchars are: <span class="s1">&#39;x&#39;</span>, <span class="s1">&#39;g&#39;<
 &gt; 
 </code></pre></td></tr></table>
 </div>
-</div><p>The <code>usefulGadgets</code>'s which ROP Emporium gives us will come in handy, so disasseble it.</p>
+</div><p>The <code>usefulGadgets</code>'s which ROP Emporium gives us will come in handy, so disassemble it.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -390,7 +390,7 @@ badchars are: <span class="s1">&#39;x&#39;</span>, <span class="s1">&#39;g&#39;<
 <li>In the other hand, the <code>unmap</code> function exploits gadgets to change the string once is in memory, restoring its original content. To do that, disasseble the <code>usefulGadgets</code> function and use this gadget:
 <code>sub BYTE PTR [r15],r14b; ret</code>. The unmapping is done by substracting the decimal ASCII value of the mapped char with the original one.</li>
 </ul>
-<p>Now we have all the elements to build a rop chain.
+<p>Now we have all the elements to build a ROP chain.
 Here&rsquo;s how the stack should be structured before the ret instruction in the <code>pwnme</code> function:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

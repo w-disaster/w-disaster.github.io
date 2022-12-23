@@ -5,7 +5,7 @@
 
 CTF took from https://ropemporium.com/challenge/badchars.html.
 
-The aim of this challenge is similar to the previous one ([write4](https://w-disaster.github.io/write4/)): store a string into memory and call `print_file` to show then content of `flag.txt`. The difference is that *badchars* are applied to every character passed as input, so the string might be handled in some way to change its content after storing it in memory.
+The aim of this challenge is similar to the previous one ([write4](https://w-disaster.github.io/write4/)): store a string into memory and call `print_file` to show the content of `flag.txt`. The difference is that *badchars* are applied to every character passed as input, so the string might be handled in some way to change its content after storing it in memory.
 
 More information are shown in the linked website.
 
@@ -28,8 +28,8 @@ nth vaddr      bind   type   lib name
 4   0x00400510 GLOBAL FUNC       print_file
 ```
 
-First, let's see the function written by the programmer:
-```sh
+First, let's see the functions written by the programmer:
+```bash
 $ rabin2 -qs badchars| grep -ve imp -e ' 0 '
 0x00601038 1 completed.7698
 0x00400617 17 usefulFunction
@@ -78,7 +78,7 @@ Dump of assembler code for function pwnme:
 End of assembler dump.
 ```
 Note that:
-- There's a ```rax,[rbp-0x40]; add rax,0x20``` instruction before the memset and read operation, so the address where the input string will be placed is `[rbp-0x20]`.
+- There's a ```lea rax,[rbp-0x40]; add rax,0x20``` instruction before the memset and read operation, so the address where the input string will be placed is from `[rbp-0x20]`.
 - No bound checking is done for the input string, so we can override the `rsp` register to modify as we want the flow of execution of this program.
 - The `leave` instruction does `mov rsp, rbp; pop rbp` and the `ret` a `add rsp, 0x8`.
 
@@ -120,7 +120,7 @@ Key to Flags:
   C (compressed), x (unknown), o (OS specific), E (exclude),
   l (large), p (processor specific)
 ```
-`.data` is writable so let's take its address (`0000000000601028`).
+`.data` section is writable so let's take its address (`0x0000000000601028`).
 
 
 ## Deal with badchars
@@ -135,7 +135,7 @@ badchars are: 'x', 'g', 'a', '.'
 > 
 ```
 
-The `usefulGadgets`'s which ROP Emporium gives us will come in handy, so disasseble it.
+The `usefulGadgets`'s which ROP Emporium gives us will come in handy, so disassemble it.
 
 ```asm
 pwndbg> disass usefulGadgets
@@ -159,7 +159,7 @@ For the former I build a mapping and an unmapping function.
 - In the other hand, the `unmap` function exploits gadgets to change the string once is in memory, restoring its original content. To do that, disasseble the `usefulGadgets` function and use this gadget:
 `sub BYTE PTR [r15],r14b; ret`. The unmapping is done by substracting the decimal ASCII value of the mapped char with the original one.
 
-Now we have all the elements to build a rop chain.
+Now we have all the elements to build a ROP chain.
 Here's how the stack should be structured before the ret instruction in the ```pwnme``` function:
 
 ```asm
