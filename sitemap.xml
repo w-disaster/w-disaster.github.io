@@ -1,28 +1,192 @@
-<urlset
-    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
-    ><url>
-            <loc>https://w-disaster.github.io/categories/</loc><lastmod>2022-12-23T12:17:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://w-disaster.github.io/posts/</loc><lastmod>2022-12-23T12:17:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://w-disaster.github.io/tags/returned-oriented-programming/</loc><lastmod>2022-12-23T12:17:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://w-disaster.github.io/tags/rop/</loc><lastmod>2022-12-23T12:17:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://w-disaster.github.io/badchars/</loc><lastmod>2022-12-23T12:17:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://w-disaster.github.io/tags/</loc><lastmod>2022-12-23T12:17:00&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://w-disaster.github.io/write4/</loc><lastmod>2022-05-14T20:27:01&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/split/</loc><lastmod>2022-05-14T11:42:29&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/callme/</loc><lastmod>2022-05-14T11:42:29&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/tags/aes/</loc><lastmod>2022-05-13T14:08:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/tags/crypto/</loc><lastmod>2022-05-13T14:08:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/ecb-oracle/</loc><lastmod>2022-05-13T14:08:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/tags/ecb/</loc><lastmod>2022-05-13T14:08:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/tags/exploit/</loc><lastmod>2022-05-13T14:08:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/password-as-keys/</loc><lastmod>2022-05-13T14:08:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/tags/cbc/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/crypto-lazy-cbc/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/about/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/tags/content/_index.fr/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/categories/crypto/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/categories/rop/</loc><lastmod>2022-05-13T14:08:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/tags/installation/_index.zh-cn/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://w-disaster.github.io/tags/configuration/_index.zh-cn/</loc><lastmod>2022-04-07T10:02:17&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://w-disaster.github.io/categories/</loc>
+    <lastmod>2023-10-24T16:18:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/tags/miscellaneous/</loc>
+    <lastmod>2023-10-24T16:18:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/posts/</loc>
+    <lastmod>2023-10-24T16:18:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/tags/prime-numbers/</loc>
+    <lastmod>2023-10-24T16:18:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/structure_and_randomness_in_prime_numbers/</loc>
+    <lastmod>2023-10-24T16:18:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/tags/</loc>
+    <lastmod>2023-10-24T16:18:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/</loc>
+    <lastmod>2023-10-24T16:18:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/tags/returned-oriented-programming/</loc>
+    <lastmod>2022-05-14T20:27:01+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/tags/rop/</loc>
+    <lastmod>2022-05-14T20:27:01+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/write4/</loc>
+    <lastmod>2022-05-14T20:27:01+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/split/</loc>
+    <lastmod>2022-05-14T11:42:29+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/callme/</loc>
+    <lastmod>2022-05-14T11:42:29+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/tags/aes/</loc>
+    <lastmod>2022-05-13T14:08:21+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/tags/crypto/</loc>
+    <lastmod>2022-05-13T14:08:21+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/ecb-oracle/</loc>
+    <lastmod>2022-05-13T14:08:21+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/tags/ecb/</loc>
+    <lastmod>2022-05-13T14:08:21+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/tags/exploit/</loc>
+    <lastmod>2022-05-13T14:08:21+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/password-as-keys/</loc>
+    <lastmod>2022-05-13T14:08:21+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/tags/cbc/</loc>
+    <lastmod>2022-04-07T10:02:17+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/crypto-lazy-cbc/</loc>
+    <lastmod>2022-04-07T10:02:17+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/about/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/tags/content/_index.fr/</loc>
+    <lastmod>2022-04-07T10:02:17+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/categories/crypto/</loc>
+    <lastmod>2022-04-07T10:02:17+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/categories/miscellaneous/</loc>
+    <lastmod>2023-10-24T16:18:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/categories/rop/</loc>
+    <lastmod>2022-05-13T14:08:21+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/tags/installation/_index.zh-cn/</loc>
+    <lastmod>2022-04-07T10:02:17+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://w-disaster.github.io/tags/configuration/_index.zh-cn/</loc>
+    <lastmod>2022-04-07T10:02:17+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>
