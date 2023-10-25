@@ -3,7 +3,17 @@
         <title>returned-oriented programming - Tag - w-disaster blog</title>
         <link>https://w-disaster.github.io/tags/returned-oriented-programming/</link>
         <description>returned-oriented programming - Tag - w-disaster blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 14 May 2022 11:00:00 &#43;0200</lastBuildDate><atom:link href="https://w-disaster.github.io/tags/returned-oriented-programming/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 22 Dec 2022 17:02:00 &#43;0200</lastBuildDate><atom:link href="https://w-disaster.github.io/tags/returned-oriented-programming/" rel="self" type="application/rss+xml" /><item>
+    <title>ROP - Badchars</title>
+    <link>https://w-disaster.github.io/badchars/</link>
+    <pubDate>Thu, 22 Dec 2022 17:02:00 &#43;0200</pubDate>
+    <author>w-disaster</author>
+    <guid>https://w-disaster.github.io/badchars/</guid>
+    <description><![CDATA[Description CTF took from https://ropemporium.com/challenge/badchars.html.
+The aim of this challenge is similar to the previous one (write4): store a string into memory and call print_file to show the content of flag.txt. The difference is that badchars are applied to every character passed as input, so the string might be handled in some way to change its content after storing it in memory.
+More information are shown in the linked website.]]></description>
+</item>
+<item>
     <title>ROP - Write4</title>
     <link>https://w-disaster.github.io/write4/</link>
     <pubDate>Sat, 14 May 2022 11:00:00 &#43;0200</pubDate>
